@@ -1,0 +1,43 @@
+{
+  "name": "clara-browser",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Clara AI Browser — Next-generation autonomous browser",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "typecheck": "tsc --noEmit",
+    "electron:dev": "concurrently \"vite\" \"electron electron/main.ts\"",
+    "electron:build": "vite build && electron-builder"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zustand": "^4.5.5",
+    "lucide-react": "^0.447.0",
+    "framer-motion": "^11.9.0",
+    "clsx": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.10",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.2",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.8",
+    "eslint": "^9.11.0",
+    "@eslint/js": "^9.11.0",
+    "typescript-eslint": "^8.8.0",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.12",
+    "globals": "^15.9.0",
+    "electron": "^32.1.0",
+    "electron-builder": "^25.0.5",
+    "concurrently": "^9.0.1"
+  }
+}

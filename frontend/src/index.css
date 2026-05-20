@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-clara-border;
+  }
+
+  body {
+    @apply bg-clara-bg text-clara-text;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-clara-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-clara-text-muted;
+  }
+
+  ::selection {
+    @apply bg-clara-accent/30 text-white;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-clara-card/60 backdrop-blur-xl border border-clara-border/50 rounded-xl;
+  }
+
+  .glass-hover {
+    @apply glass transition-all duration-200 hover:bg-clara-card/80 hover:border-clara-accent/30;
+  }
+
+  .glow-border {
+    @apply border border-clara-accent/30 shadow-[0_0_15px_rgba(108,92,231,0.15)];
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-clara-accent to-clara-accent-light bg-clip-text text-transparent;
+  }
+
+  .input-field {
+    @apply bg-clara-surface/80 border border-clara-border/50 rounded-lg px-4 py-2.5
+           text-clara-text placeholder:text-clara-text-muted
+           focus:outline-none focus:border-clara-accent/50 focus:ring-1 focus:ring-clara-accent/20
+           transition-all duration-200;
+  }
+}
